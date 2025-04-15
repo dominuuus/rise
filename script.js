@@ -1,42 +1,42 @@
 // Dados dos arquivos fornecidos
 const animalsData = [
-    { name: "Onça-pintada", natural: ["Amazônia", "Pantanal"], incompatible: ["Tundra", "Deserto", "Pampa", "Savana"], image: "assets/animais/onca-pintada.jpg" },
-    { name: "Bicho-preguiça", natural: ["Amazônia"], incompatible: ["Caatinga", "Cerrado", "Deserto", "Tundra"], image: "assets/animais/bicho-preguica.jpg" },
-    { name: "Arara-azul", natural: ["Amazônia", "Cerrado"], incompatible: ["Tundra", "Deserto", "Savana"], image: "assets/animais/arara-azul.jpg" },
+    { name: "Onça-pintada", natural: ["Amazônia", "Pantanal", "Caatinga", "Cerrado", "Mata Atlântica"], incompatible: ["Tundra", "Deserto", "Pampa", "Savana"], image: "assets/animais/onca-pintada.jpg" },
+    { name: "Bicho-preguiça", natural: ["Amazônia", "Pantanal", "Caatinga", "Cerrado", "Mata Atlântica"], incompatible: ["Caatinga", "Cerrado", "Deserto", "Tundra"], image: "assets/animais/bicho-preguica.jpg" },
+    { name: "Arara-azul", natural: ["Amazônia", "Cerrado", "Pantanal"], incompatible: ["Tundra", "Deserto", "Savana"], image: "assets/animais/arara-azul.jpg" },
     { name: "Jacaré-açu", natural: ["Amazônia"], incompatible: ["Deserto", "Tundra", "Pampa"], image: "assets/animais/jacare-acu.webp" },
     { name: "Mico-leão-dourado", natural: ["Mata Atlântica"], incompatible: ["Caatinga", "Deserto", "Pampa", "Tundra"], image: "assets/animais/mico-leao-dourado.jpg" },
-    { name: "Tamanduá-bandeira", natural: ["Cerrado", "Amazônia"], incompatible: ["Tundra", "Deserto"], image: "assets/animais/tamandua-bandeira.jpg" },
-    { name: "Capivara", natural: ["Pantanal"], incompatible: ["Deserto", "Tundra"], image: "assets/animais/capivara.jpg" },
+    { name: "Tamanduá-bandeira", natural: ["Cerrado", "Amazônia", "Caatinga", "Pantanal", "Mata Atlântica"], incompatible: ["Tundra", "Deserto"], image: "assets/animais/tamandua-bandeira.jpg" },
+    { name: "Capivara", natural: ["Pantanal", "Amazônia", "Mata Atlântica", "Cerrado", "Pampa"], incompatible: ["Deserto", "Tundra"], image: "assets/animais/capivara.jpg" },
     { name: "Tuiuiú", natural: ["Pantanal"], incompatible: ["Deserto", "Tundra", "Amazônia", "Mata Atlântica"], image: "assets/animais/tuiuiu.jpg" },
     { name: "Lobo-guará", natural: ["Cerrado"], incompatible: ["Tundra", "Amazônia", "Mata Atlântica"], image: "assets/animais/logo-guara.jpg" },
-    { name: "Macaco bugio", natural: ["Amazônia", "Mata Atlântica"], incompatible: ["Tundra", "Deserto", "Caatinga"], image: "assets/animais/macaco-bugio.jpg" },
+    { name: "Macaco bugio", natural: ["Amazônia", "Mata Atlântica", "Cerrado", "Pantanal"], incompatible: ["Tundra", "Deserto", "Caatinga"], image: "assets/animais/macaco-bugio.jpg" },
     { name: "Jacaré-do-pantanal", natural: ["Pantanal"], incompatible: ["Tundra", "Deserto", "Cerrado"], image: "assets/animais/jacare-do-pantanal.jpg" },
     { name: "Camelo", natural: ["Deserto"], incompatible: ["Amazônia", "Pantanal"], image: "assets/animais/camelo.jpg" },
     { name: "Urso-polar", natural: ["Tundra"], incompatible: ["Amazônia", "Cerrado", "Savana"], image: "assets/animais/urso-polar.jpg" },
     { name: "Raposa-do-ártico", natural: ["Tundra"], incompatible: ["Pantanal", "Caatinga", "Amazônia"], image: "assets/animais/raposa-do-artico.jpg" },
     { name: "Girafa", natural: ["Savana"], incompatible: ["Mata Atlântica", "Amazônia", "Tundra"], image: "assets/animais/girafa.jpg" },
-    { name: "Elefante", natural: ["Savana"], incompatible: ["Amazônia", "Mata Atlântica", "Tundra"], image: "assets/animais/elefante-africano.jpg" },
-    { name: "Tamanduá-mirim", natural: ["Caatinga"], incompatible: ["Tundra", "Deserto"], image: "assets/animais/tamandua-mirim.jpg" },
-    { name: "Pica-pau-rei", natural: ["Floresta com Araucárias"], incompatible: ["Deserto", "Tundra"], image: "assets/animais/pica-pau-rei.jpg" },
-    { name: "Teiú", natural: ["Caatinga"], incompatible: ["Tundra", "Pampa"], image: "assets/animais/teiu.jpg" },
+    { name: "Elefante Africano", natural: ["Savana"], incompatible: ["Amazônia", "Mata Atlântica", "Tundra"], image: "assets/animais/elefante-africano.jpg" },
+    { name: "Tamanduá-mirim", natural: ["Caatinga", "Amazônia", "Mata Atlântica", "Cerrado"], incompatible: ["Tundra", "Deserto"], image: "assets/animais/tamandua-mirim.jpg" },
+    { name: "Pica-pau-rei", natural: ["Floresta com Araucárias", "Mata Atlântica", "Cerrado"], incompatible: ["Deserto", "Tundra"], image: "assets/animais/pica-pau-rei.jpg" },
+    { name: "Teiú", natural: ["Caatinga", "Cerrado", "Mata Atlântica", "Cerrado", "Pantanal"], incompatible: ["Tundra", "Pampa"], image: "assets/animais/teiu.jpg" },
     { name: "Feneco", natural: ["Deserto"], incompatible: ["Amazônia", "Pantanal", "Mata Atlântica"], image: "assets/animais/fennec.jpg" },
-    { name: "Anta", natural: ["Mata Atlântica", "Amazônia"], incompatible: ["Deserto", "Tundra"], image: "assets/animais/anta.jpg" },
-    { name: "Gralha-azul", natural: ["Floresta com Araucárias"], incompatible: ["Deserto", "Tundra"], image: "assets/animais/gralha-azul.jpg" },
+    { name: "Anta", natural: ["Mata Atlântica", "Amazônia", "Cerrado", "Pantanal"], incompatible: ["Deserto", "Tundra"], image: "assets/animais/anta.jpg" },
+    { name: "Gralha-azul", natural: ["Floresta com Araucárias", "Mata Atlântica"], incompatible: ["Deserto", "Tundra"], image: "assets/animais/gralha-azul.jpg" },
     { name: "Hiena", natural: ["Savana"], incompatible: ["Pantanal", "Tundra", "Amazônia"], image: "assets/animais/hiena.jpg" },
     { name: "Seriema", natural: ["Cerrado"], incompatible: ["Amazônia", "Mata Atlântica", "Tundra"], image: "assets/animais/seriema.jpg" },
     { name: "Coruja-das-neves", natural: ["Tundra"], incompatible: ["Amazônia", "Pantanal"], image: "assets/animais/coruja-das-neves.jpg" },
-    { name: "Tatu-bola", natural: ["Mata Atlântica", "Caatinga"], incompatible: ["Tundra", "Deserto", "Amazônia", "Pantanal"], image: "assets/animais/tatu-bola.jpg" },
+    { name: "Tatu-bola", natural: ["Mata Atlântica", "Caatinga", "Cerrado"], incompatible: ["Tundra", "Deserto", "Amazônia", "Pantanal"], image: "assets/animais/tatu-bola.jpg" },
     { name: "Preguiça-de-coleira", natural: ["Mata Atlântica"], incompatible: ["Tundra", "Deserto", "Pampa", "Caatinga", "Savana"], image: "assets/animais/preguica-de-coleira.jpg" },
-    { name: "Cachorro-vinagre", natural: ["Caatinga", "Cerrado"], incompatible: ["Tundra", "Deserto", "Amazônia", "Mata Atlântica"], image: "assets/animais/cachorro-vinagre.jpg" },
-    { name: "Jiboia", natural: ["Caatinga", "Cerrado", "Mata Atlântica"], incompatible: ["Tundra", "Deserto", "Pampa"], image: "assets/animais/jiboia.jpg" },
-    { name: "Cutia", natural: ["Caatinga", "Mata Atlântica", "Cerrado"], incompatible: ["Tundra", "Deserto", "Savana"], image: "assets/animais/cutia.jpg" },
-    { name: "Veado-campeiro", natural: ["Pampa", "Pantanal"], incompatible: ["Tundra", "Deserto", "Amazônia", "Mata Atlântica"], image: "assets/animais/veado-campeiro.jpg" },
+    { name: "Cachorro-vinagre", natural: ["Caatinga", "Cerrado", "Pantanal"], incompatible: ["Tundra", "Deserto", "Amazônia", "Mata Atlântica"], image: "assets/animais/cachorro-vinagre.jpg" },
+    { name: "Jiboia", natural: ["Caatinga", "Cerrado", "Mata Atlântica", "Amazônia"], incompatible: ["Tundra", "Deserto", "Pampa"], image: "assets/animais/jiboia.jpg" },
+    { name: "Cutia", natural: ["Caatinga", "Mata Atlântica", "Cerrado", "Amazônia"], incompatible: ["Tundra", "Deserto", "Savana"], image: "assets/animais/cutia.jpg" },
+    { name: "Veado-campeiro", natural: ["Pampa", "Pantanal", "Cerrado", "Caatinga"], incompatible: ["Tundra", "Deserto", "Amazônia", "Mata Atlântica"], image: "assets/animais/veado-campeiro.jpg" },
     { name: "Ema", natural: ["Pampa", "Cerrado"], incompatible: ["Tundra", "Deserto", "Amazônia", "Mata Atlântica"], image: "assets/animais/ema.jpg" },
-    { name: "Gambá-de-orelha-branca", natural: ["Pampa", "Mata Atlântica"], incompatible: ["Tundra", "Deserto", "Savana"], image: "assets/animais/gamba-de-orelha-branca.jpg" },
-    { name: "Quati", natural: ["Floresta com Araucárias", "Mata Atlântica"], incompatible: ["Tundra", "Deserto", "Caatinga", "Savana"], image: "assets/animais/quati.jpg" },
+    { name: "Gambá-de-orelha-branca", natural: ["Pampa", "Mata Atlântica", "Caatinga", "Cerrado"], incompatible: ["Tundra", "Deserto", "Savana"], image: "assets/animais/gamba-de-orelha-branca.jpg" },
+    { name: "Quati", natural: ["Floresta com Araucárias", "Mata Atlântica", "Cerrado"], incompatible: ["Tundra", "Deserto", "Caatinga", "Savana"], image: "assets/animais/quati.jpg" },
     { name: "Ouriço-cacheiro", natural: ["Floresta com Araucárias", "Mata Atlântica"], incompatible: ["Tundra", "Deserto", "Pampa", "Caatinga"], image: "assets/animais/ourico-cacheiro.jpg" },
-    { name: "Cobra-cascavel", natural: ["Deserto", "Caatinga"], incompatible: ["Amazônia", "Pantanal", "Tundra", "Mata Atlântica"], image: "assets/animais/cobra-cascavel.jpg" },
-    { name: "Lagarto-iguana", natural: ["Deserto"], incompatible: ["Amazônia", "Pantanal", "Tundra", "Mata Atlântica"], image: "assets/animais/lagarto-iguana.jpg" },
+    { name: "Cobra-cascavel", natural: ["Deserto", "Caatinga", "Cerrado"], incompatible: ["Amazônia", "Pantanal", "Tundra", "Mata Atlântica"], image: "assets/animais/cobra-cascavel.jpg" },
+    { name: "Lagarto-iguana", natural: ["Deserto", "Amazônia", "Pantanal", "Caatinga", "Mata Atlântica"], incompatible: ["Amazônia", "Pantanal", "Tundra", "Mata Atlântica"], image: "assets/animais/lagarto-iguana.jpg" },
     { name: "Coruja-buraqueira", natural: ["Deserto", "Pampa"], incompatible: ["Amazônia", "Tundra", "Pantanal"], image: "assets/animais/coruja-buraqueira.jpg" },
     { name: "Rena", natural: ["Tundra"], incompatible: ["Amazônia", "Pantanal", "Deserto", "Mata Atlântica"], image: "assets/animais/rena.jpg" },
     { name: "Lobo-ártico", natural: ["Tundra"], incompatible: ["Amazônia", "Deserto", "Caatinga", "Savana"], image: "assets/animais/lobo-artico.jpg" },
@@ -519,7 +519,7 @@ function loadAnimals() {
     animalList.innerHTML = '';
     
     let selectedAnimals = getBiomeCompatibleItems(animalsData, currentBiome, 3);
-    const remainingCount = 8 - selectedAnimals.length;
+    const remainingCount = 9 - selectedAnimals.length;
     const nonSelectedAnimals = animalsData.filter(
         animal => !selectedAnimals.some(selected => selected.name === animal.name)
     );
@@ -562,7 +562,7 @@ function loadPlants() {
     plantList.innerHTML = '';
     
     let selectedPlants = getBiomeCompatibleItems(plantsData, currentBiome, 3);
-    const remainingCount = 8 - selectedPlants.length;
+    const remainingCount = 9 - selectedPlants.length;
     const nonSelectedPlants = plantsData.filter(
         plant => !selectedPlants.some(selected => selected.name === plant.name)
     );
