@@ -122,20 +122,8 @@ O **Rise** é uma experiência gamificada que simula a restauração de biomas, 
 
 ---
 
-## 💡 Sugestões para Melhorar
-- **Badges:** Adicionar conquistas por bioma concluído (ex: *"Guardião da Amazônia"*).  
-- **Tutorial Inicial:** Modal explicando as métricas:  
-  ```javascript
-  function showWelcomeModal() {
-      document.getElementById('welcome-text').innerHTML = `
-          Bem-vindo ao ODS 15!<br>
-          - <b>Biodiversidade</b>: Escolha animais nativos (até 50 pontos).<br>
-          - <b>Índice Verde</b>: Selecione plantas certas (até 50 pontos).<br>
-          - <b>Consciência</b>: Acertos no quiz (até 40 pontos).
-      `;
-      showSection('welcome-modal');
-  }
-
-
-  - Tela do jogo
+- Tela do jogo
   ![alt text](assets/rise.png)
+  
+
+  
