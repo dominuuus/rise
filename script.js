@@ -519,7 +519,7 @@ function loadAnimals() {
     animalList.innerHTML = '';
     
     let selectedAnimals = getBiomeCompatibleItems(animalsData, currentBiome, 3);
-    const remainingCount = 9 - selectedAnimals.length;
+    const remainingCount = 8 - selectedAnimals.length;
     const nonSelectedAnimals = animalsData.filter(
         animal => !selectedAnimals.some(selected => selected.name === animal.name)
     );
@@ -562,7 +562,7 @@ function loadPlants() {
     plantList.innerHTML = '';
     
     let selectedPlants = getBiomeCompatibleItems(plantsData, currentBiome, 3);
-    const remainingCount = 9 - selectedPlants.length;
+    const remainingCount = 8 - selectedPlants.length;
     const nonSelectedPlants = plantsData.filter(
         plant => !selectedPlants.some(selected => selected.name === plant.name)
     );
