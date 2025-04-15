@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo ODS 15 - Vida Terrestre</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1>Rise: O jogo da vida terrestre</h1>
+    
+    <div class="container">
+      
+      <div class="menu">
+        <div id="biome-progress" class="section">
+          <h2>Progresso dos Biomas</h2>
+          <p id="current-biome-display" class="current-biome-display">Explorando: Nenhum bioma selecionado</p>
+
+          <ul id="biome-status-list"></ul>
+        </div>
+      </div>
+      
+      <div>
+        <div id="game-area">
+          <!-- Etapa 1: Escolha do Bioma -->
+          <!-- Nova seção de progresso -->
+          <div id="game-area">
+            
+            <!-- Etapa 1: Escolha do Bioma -->
+            <div id="biome-selection" class="section">
+              <h2>🌍 Etapa 1: Escolha do Bioma – Onde Tudo Começa</h2>
+              <p id="current-biome-text">Iniciando com: Floresta Amazônia</p>
+              <div id="biome-image-container" class="biome-image"></div>
+              <p id="biome-description" class="biome-description"></p>
+              <button onclick="startBiome()">Começar Exploração</button>
+            </div>
+
+            <!-- Modal de Instruções -->
+            <div id="instructions-modal" class="modal hidden">
+              <div class="modal-content">
+                <h2>Desafio da Biodiversidade</h2>
+                <p id="instructions-text">
+                  Bem-vindo ao desafio de restaurar o bioma! Sua missão é
+                  escolher 4 animais que vivam em harmonia com o ecossistema
+                  atual. Cuidado: animais incompatíveis podem desequilibrar a
+                  natureza, reduzindo sua pontuação. Pense como um guardião da
+                  floresta e faça escolhas sustentáveis!
+                </p>
+                <button id="ready-button" onclick="startAnimalSelection()">
+                  Estou Pronto
+                </button>
+              </div>
+            </div>
+
+            <!-- Modal de Instruções para Plantas -->
+            <div id="plant-instructions-modal" class="modal hidden">
+              <div class="modal-content">
+                <h2>Desafio do Índice Verde</h2>
+                <p id="plant-instructions-text">
+                  Sua missão agora é selecionar 2 plantas que fortaleçam o
+                  bioma! Escolha espécies nativas para maximizar o índice verde.
+                  Plantas incompatíveis podem prejudicar o equilíbrio ecológico.
+                </p>
+                <button id="plant-ready-button" onclick="startPlantSelection()">
+                  Estou Pronto
+                </button>
+              </div>
+            </div>
+
+            <!-- Modal de Instruções para Quiz -->
+            <div id="quiz-instructions-modal" class="modal hidden">
+              <div class="modal-content">
+                <h2>Desafio de Consciência Ambiental</h2>
+                <p id="quiz-instructions-text">
+                  Hora de testar seus conhecimentos! Responda às perguntas com
+                  base no bioma atual. Suas escolhas vão definir o futuro
+                  sustentável do ecossistema.
+                </p>
+                <button id="quiz-ready-button" onclick="startQuiz()">
+                  Estou Pronto
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Etapa 2: Escolha de Animais -->
+          <div id="animal-selection" class="section hidden">
+            <h2>🌿 Etapa 2: Biodiversidade – Os Guardiões do Bioma</h2>
+            <p>
+              Bem-vindo à segunda etapa da sua missão ecológica! Agora que você já escolheu o bioma que deseja restaurar, é hora de começar a reconstruir a vida selvagem desse ecossistema. Você será desafiado a escolher 4 animais que acredita serem nativos da região. Mas cuidado! Nem todos pertencem ao mesmo habitat. Observe pistas, use seu raciocínio lógico e conte com sua memória ecológica.
+            </p>
+            <div id="animal-list" class="animal-grid"></div>
+            <button onclick="confirmAnimals()" disabled id="animal-confirm">
+              Confirmar Animais
+            </button>
+          </div>
+          <!-- Etapa 3: Escolha de Plantas -->
+          <div id="plant-selection" class="section hidden">
+            <h2>🌳 Etapa 3: Flora Nativa – O Pulmão do Bioma</h2>
+            <p>
+              Agora que os animais estão voltando para casa, é hora de plantar as raízes da vida! Nessa etapa, você precisa selecionar as plantas e árvores ideais para o bioma escolhido.
+              <p>🌻 Faça suas escolhas com cuidado e estratégia. As plantas certas vão alimentar os animais, purificar o ar e garantir que o ciclo da natureza funcione como deve. Já as erradas podem dificultar a recuperação do bioma ou até atrair pragas e desequilíbrios.</p>
+            </p>
+            <div id="plant-list" class="plant-grid"></div>
+            <button onclick="confirmPlants()" disabled id="plant-confirm">
+              Confirmar Plantas
+            </button>
+          </div>
+          <!-- Etapa 4: Status do Bioma -->
+          <div id="biome-status" class="section hidden">
+            <h2>Status do Bioma</h2>
+            <div id="biome-status-image" class="biome-image"></div>
+            <p id="biome-status-details"></p>
+            <p>
+              <strong>Índice Verde:</strong> <span id="green-index">0</span>
+            </p>
+            <p>
+              <strong>Biodiversidade:</strong> <span id="biodiversity">0</span>
+            </p>
+            <p>
+              <strong>Pontuação Total:</strong> <span id="total-score">0</span>
+            </p>
+            <p id="status-text"></p>
+            <button onclick="restartBiome()">Tentar Novamente</button>
+            <button onclick="proceedToQuiz()" disabled id="quiz-button">
+              Prosseguir para o Quiz
+            </button>
+          </div>
+          <!-- Etapa 5: Quiz Ambiental -->
+          <div id="quiz-section" class="section hidden">
+            <h2>🧠 Etapa Final: Quiz do Conhecimento – A Voz da Consciência</h2>
+            <div id="quiz-content"></div>
+            <button onclick="submitQuiz()" id="quiz-submit" disabled>
+              Enviar Respostas
+            </button>
+          </div>
+          <!-- Resultado Final -->
+          <div id="final-result" class="section hidden">
+            <h2>Resultado Final</h2>
+            <p id="final-text"></p>
+            <p>
+              <strong>Índice Verde:</strong> <span id="final-green">0</span>/30
+            </p>
+            <p>
+              <strong>Biodiversidade:</strong>
+              <span id="final-biodiversity">0</span>/30
+            </p>
+            <p>
+              <strong>Consciência Ambiental:</strong>
+              <span id="final-awareness">0</span>/40
+            </p>
+            <p>
+              <strong>Total Geral:</strong> <span id="final-total">0</span>/100
+            </p>
+            <button onclick="nextBiome()">Explorar Próximo Bioma</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
