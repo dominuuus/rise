@@ -1,6 +1,6 @@
 // Dados dos arquivos fornecidos
 const animalsData = [
-    { name: "Onça-pintada", natural: ["Amazônia", "Pantanal", "Caatinga", "Cerrado", "Mata Atlântica"], incompatible: ["Tundra", "Deserto", "Pampa", "Savana"], image: "assets/animais/onca-pintada.jpg" },
+    { name: "Onça-pintada", natural: ["Amazônia", "Pantanal", "Caatinga", "Cerrado", "Mata Atlântica"], incompatible: ["Tundra", "Deserto", "Pampa", "Savana"], image: "assets/animais/onca-pintada.png" },
     { name: "Bicho-preguiça", natural: ["Amazônia", "Pantanal", "Caatinga", "Cerrado", "Mata Atlântica"], incompatible: ["Caatinga", "Cerrado", "Deserto", "Tundra"], image: "assets/animais/bicho-preguica.jpg" },
     { name: "Arara-azul", natural: ["Amazônia", "Cerrado", "Pantanal"], incompatible: ["Tundra", "Deserto", "Savana"], image: "assets/animais/arara-azul.jpg" },
     { name: "Jacaré-açu", natural: ["Amazônia"], incompatible: ["Deserto", "Tundra", "Pampa"], image: "assets/animais/jacare-acu.webp" },
